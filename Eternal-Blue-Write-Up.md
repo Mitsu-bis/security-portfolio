@@ -194,7 +194,7 @@ Within our elevated meterpreter shell, run the command 'hashdump'. This will dum
 ![alt text](<ScreenShots/MSFConsole HashDump.png>)
 
 
-Copy the administrators hash to the clipboard and now open another tab on your terminal. Switch to that new terminal tab. 
+Copy the Jon's hash to the clipboard and now open another tab on your terminal. Switch to that new terminal tab. 
 
 We need to save the copied hash as a txt file for john to crack. 
 To open our text editor run the command "nano".
@@ -203,7 +203,7 @@ To open our text editor run the command "nano".
 
 ![alt text](ScreenShots/Nano.png)
 
-Paste your copied hash. Ctrl+Z to Exit the text editor and Y to save changes. Name your file "adminhash.txt".
+Paste your copied hash. Ctrl+Z to Exit the text editor and Y to save changes. Name your file "jonhash.txt".
 
 ![alt text](<ScreenShots/nano w pass.png>)
 
@@ -213,20 +213,32 @@ Run the "ls" command to verify that the hash txt file is in your working directo
 
 Before we can crack this hash, we need to understand what type of hash this is. 
 
-lets enumerate the hash with jonh using the "john --show=type adminhash.txt" command
+lets enumerate the hash with jonh using the "john --show=type jonhash.txt" command
 
-    john --show=type adminhash.txt
+    john --show=type jonhash.txt
 
 ![alt text](<ScreenShots/hash Type.png>)
 
 
 Here we can see that the hash is a "NTLM" (New Technology LAN Manager) type of hash. 
 
-To crack the hash we run the command "john --format=NT --wordlist=/usr/share/wordlists/rockyou.txt  adminhash.txt"
+To crack the hash we run the command "john --format=NT --wordlist=/usr/share/wordlists/rockyou.txt  jonhash.txt"
 
-    john --format=NT --wordlist=/usr/share/wordlists/rockyou.txt  adminhash.txt
+    john --format=NT --wordlist=/usr/share/wordlists/rockyou.txt  jonhash.txt
 
 The syntax for this is john --format={format} --wordlist={wordlist} {target txt file} 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
