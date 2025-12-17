@@ -205,11 +205,11 @@ To open our text editor run the command "nano".
 
 Paste your copied hash. Ctrl+Z to Exit the text editor and Y to save changes. Name your file "jonhash.txt".
 
-![alt text](<ScreenShots/nano w pass.png>)
+![alt text](<ScreenShots/Nano w jon pass.png>)
 
 Run the "ls" command to verify that the hash txt file is in your working directory. 
 
-![alt text](<ScreenShots/nano ls.png>)
+![alt text](<ScreenShots/ls with jonhash.png>)
 
 Before we can crack this hash, we need to understand what type of hash this is. 
 
@@ -217,7 +217,7 @@ lets enumerate the hash with jonh using the "john --show=type jonhash.txt" comma
 
     john --show=type jonhash.txt
 
-![alt text](<ScreenShots/hash Type.png>)
+
 
 
 Here we can see that the hash is a "NTLM" (New Technology LAN Manager) type of hash. 
