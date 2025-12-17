@@ -194,26 +194,39 @@ Within our elevated meterpreter shell, run the command 'hashdump'. This will dum
 ![alt text](<ScreenShots/MSFConsole HashDump.png>)
 
 
-Copy the hashes and have fun Cracking! 
-
-
-
 Copy the administrators hash to the clipboard and now open another tab on your terminal. Switch to that new terminal tab. 
 
 We need to save the copied hash as a txt file for john to crack. 
-To open our text editor run the command "nano"
+To open our text editor run the command "nano".
 
     nano
 
 ![alt text](ScreenShots/Nano.png)
 
-Paste your copied hash. Ctrl+Z to Exit the text editor and Y to save changes. Name your file "adminhash.txt"
+Paste your copied hash. Ctrl+Z to Exit the text editor and Y to save changes. Name your file "adminhash.txt".
 
 ![alt text](<ScreenShots/nano w pass.png>)
 
 Run the "ls" command to verify that the hash txt file is in your working directory. 
 
 ![alt text](<ScreenShots/nano ls.png>)
+
+before we can crack this hash, we need to understand whay type of hash this is. 
+
+lets enumerate the hash with jonh using the "john --show=type adminhash.txt
+
+    john --show=type adminhash.txt
+
+![alt text](<ScreenShots/hash Type.png>)
+
+
+Here we can see that the hash is a "NTLM" (New Technology LAN Manager) type of hash. 
+
+
+
+
+
+
 
 
 Additional Flags!!!! 
