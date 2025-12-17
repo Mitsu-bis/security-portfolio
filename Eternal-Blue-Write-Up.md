@@ -217,16 +217,20 @@ lets enumerate the hash with jonh using the "john --show=type jonhash.txt" comma
 
     john --show=type jonhash.txt
 
+![alt text](<ScreenShots/john Hash Type.png>)
 
 
-
-Here we can see that the hash is a "NTLM" (New Technology LAN Manager) type of hash. 
+Here we can see that the hash is a "NT" (New Technology) type of hash. 
 
 To crack the hash we run the command "john --format=NT --wordlist=/usr/share/wordlists/rockyou.txt  jonhash.txt"
 
     john --format=NT --wordlist=/usr/share/wordlists/rockyou.txt  jonhash.txt
 
 The syntax for this is john --format={format} --wordlist={wordlist} {target txt file} 
+
+![alt text](<ScreenShots/Jonh password Cracked.png>)
+
+
 
 
 
