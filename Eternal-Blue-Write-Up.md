@@ -200,9 +200,11 @@ Copy the hashes and have fun Cracking!
 
 Copy the administrators hash to the clipboard and now open another tab on your terminal. Switch to that new terminal tab. 
 
-we need to save the copied hash as a txt file for john to crack. 
+We need to save the copied hash as a txt file for john to crack. 
 To open our text editor run the command "nano"
+
     nano
+    
 paste your copied hash. Ctrl+Z to Exit the text editor and Y to save changes. Now name your File "adminhash.txt"
 
 ![alt text](ScreenShots/Nano.png)
