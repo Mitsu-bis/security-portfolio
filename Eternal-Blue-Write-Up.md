@@ -203,11 +203,13 @@ To open our text editor run the command "nano".
 
 ![alt text](ScreenShots/Nano.png)
 
-Paste your copied hash. Ctrl+Z to Exit the text editor and Y to save changes. Name your file "jonhash.txt".
+Paste your copied hash. Ctrl+Z to exit the text editor and Y to save changes. Name your file "jonhash.txt".
 
 ![alt text](<ScreenShots/Nano w jon pass.png>)
 
 Run the "ls" command to verify that the hash txt file is in your working directory. 
+
+You may also run the "cat jonhash.txt" command to verify that the txt file was created properly. 
 
 ![alt text](<ScreenShots/ls with jonhash.png>)
 
