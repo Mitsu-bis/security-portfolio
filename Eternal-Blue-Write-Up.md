@@ -232,7 +232,7 @@ The syntax for this is john --format={format} --wordlist={wordlist} {target txt 
 
 ![alt text](<ScreenShots/Jonh password Cracked.png>)
 
-
+And with that we have cracked the hash and obtained jon's password! 
 
 
 
