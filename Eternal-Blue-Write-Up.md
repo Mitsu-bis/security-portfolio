@@ -205,11 +205,9 @@ To open our text editor run the command "nano"
 
     nano
 
-Paste your copied hash. Ctrl+Z to Exit the text editor and Y to save changes. Name your file "adminhash.txt"
-
 ![alt text](ScreenShots/Nano.png)
 
-paste the admin hash
+Paste your copied hash. Ctrl+Z to Exit the text editor and Y to save changes. Name your file "adminhash.txt"
 
 ![alt text](<ScreenShots/nano w pass.png>)
 
