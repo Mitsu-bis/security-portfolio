@@ -211,9 +211,9 @@ Run the "ls" command to verify that the hash txt file is in your working directo
 
 ![alt text](<ScreenShots/nano ls.png>)
 
-before we can crack this hash, we need to understand whay type of hash this is. 
+Before we can crack this hash, we need to understand what type of hash this is. 
 
-lets enumerate the hash with jonh using the "john --show=type adminhash.txt
+lets enumerate the hash with jonh using the "john --show=type adminhash.txt" command
 
     john --show=type adminhash.txt
 
@@ -222,7 +222,11 @@ lets enumerate the hash with jonh using the "john --show=type adminhash.txt
 
 Here we can see that the hash is a "NTLM" (New Technology LAN Manager) type of hash. 
 
+To crack the hash we run the command "john --format=NT --wordlist=/usr/share/wordlists/rockyou.txt  adminhash.txt"
 
+    john --format=NT --wordlist=/usr/share/wordlists/rockyou.txt  adminhash.txt
+
+The syntax for this is john --format={format} --wordlist={wordlist} {target txt file} 
 
 
 
