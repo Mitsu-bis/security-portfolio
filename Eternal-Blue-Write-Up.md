@@ -204,12 +204,16 @@ We need to save the copied hash as a txt file for john to crack.
 To open our text editor run the command "nano"
 
     nano
-    
-paste your copied hash. Ctrl+Z to Exit the text editor and Y to save changes. Now name your File "adminhash.txt"
+
+Paste your copied hash. Ctrl+Z to Exit the text editor and Y to save changes. Name your file "adminhash.txt"
 
 ![alt text](ScreenShots/Nano.png)
 
+paste the admin hash
+
 ![alt text](<ScreenShots/nano w pass.png>)
+
+Run the "ls" command to verify that the hash txt file is in your working directory. 
 
 ![alt text](<ScreenShots/nano ls.png>)
 
