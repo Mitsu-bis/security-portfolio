@@ -150,7 +150,7 @@ Set the session to 1 with the command "set SESSION 1"
      set SESSION 1
 
 Now we can run our post exploit using the "run" or "exploit" command. 
-once the payoad has executed it will create a new session names session 2.
+Once the payoad has executed it will create a new session names session 2.
 
 We have our Meterpreter session connected on the target machine now.
 
