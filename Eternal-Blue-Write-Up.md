@@ -40,7 +40,7 @@ Here we can see that the the scan came back with a found vulnerability!
 
 ![alt text](<ScreenShots/NMAP Vuln Scan 1.png>)
 
-now it's time to use our tools to eplore this vulnerability. 
+Now it's time to use our tools to eplore this vulnerability. 
 
 
 **Gain Access with Metasploit (Initial Access)**
