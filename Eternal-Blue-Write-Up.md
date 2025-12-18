@@ -158,7 +158,9 @@ Lets now switch to our Meterpreter session with the command "sessions -i {sessio
 
 
     sessions -i 2
+	
 or
+	
 	sessions 2
 
  Once your inside the session start by verifying that we have esclated to NT Authority/System. Run the "getsystem" command to confirm this. 
