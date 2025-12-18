@@ -4,15 +4,25 @@ Authored by -Mitsu
 
 This room will require a good understanding of Nmap, Metasploit, and JohnTheRipper. 
 
+
+**Vulnerability Overview: EternalBlue (CVE-2017-0144)**
+
+EternalBlue is a remote code execution vulnerability in Microsoft’s SMBv1
+implementation caused by improper handling of specially crafted packets.
+An unauthenticated attacker can send malformed SMB requests to port 445,
+leading to arbitrary kernel-level code execution.
+
+
 So lets start with booting up the attack box, and the target machine.
 Please allow 3-5 minuites for both virtual machines to boot properly. 
-
 
 This write up will be broken into a few diffrent phases based off the diffrent MITRE ATT&CK Tactics used. 
 
 
 
 **Active Reconnaissance with Nmap (Recon)**
+**T1046 Network Service Scanning**
+
 
 lets start with some basic active recon using nmap. Specifically we want to enumerate the versioning of the service that is running on the target's ports. 
 
