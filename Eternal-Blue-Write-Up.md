@@ -150,17 +150,18 @@ Set the session to 1 with the command "set SESSION 1"
      set SESSION 1
 
 Now we can run our post exploit using the "run" or "exploit" command. 
-once the payoad has executed it will create it's own session.
+once the payoad has executed it will create a new session names session 2.
 
 We have our Meterpreter session connected on the target machine now.
 
-Lets now switch to our elevated Meterpreter session with the command "sessions -i {session_id}"
+Lets now switch to our Meterpreter session with the command "sessions -i {session_id}" or "sessions {session_id}"
 
 
     sessions -i 2
+or
+	sessions 2
 
-
- Start by verifying that we have esclated to NT Authority/System. Run the "getsystem" command to confirm this. 
+ Once your inside the session start by verifying that we have esclated to NT Authority/System. Run the "getsystem" command to confirm this. 
 
     getsystem
 
