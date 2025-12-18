@@ -21,7 +21,6 @@ This write up will be broken into a few diffrent phases based off the diffrent M
 
 
 **Active Reconnaissance with Nmap (Recon)**
-**T1046 Network Service Scanning**
 
 
 lets start with some basic active recon using nmap. Specifically we want to enumerate the versioning of the service that is running on the target's ports. 
