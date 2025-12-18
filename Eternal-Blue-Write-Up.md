@@ -36,7 +36,7 @@ nmap Syntax: nmap -p {port} --script vuln {targetIP}
     namp -p 445 --script vuln 10.66.161.70
 
 
-here we can see that the the scan came back with a found vulnerability!
+Here we can see that the the scan came back with a found vulnerability!
 
 ![alt text](<ScreenShots/NMAP Vuln Scan 1.png>)
 
