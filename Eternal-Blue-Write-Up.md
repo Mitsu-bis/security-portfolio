@@ -5,7 +5,7 @@ Authored by -Mitsu
 This room will require a good understanding of Nmap, Metasploit, and JohnTheRipper. 
 
 So lets start with booting up the attack box, and the target machine.
-Please allow 3-5 Minuites for both virtual machines to Boot properly. 
+Please allow 3-5 minuites for both virtual machines to boot properly. 
 
 
 This write up will be broken into a few diffrent phases based off the diffrent MITRE ATT&CK Tactics used. 
