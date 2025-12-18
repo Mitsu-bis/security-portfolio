@@ -215,7 +215,7 @@ You may also run the "cat jonhash.txt" command to verify that the txt file was c
 
 Before we can crack this hash, we need to understand what type of hash this is. 
 
-lets enumerate the hash with jonh using the "john --show=type jonhash.txt" command
+lets enumerate the hash with john using the "john --show=type jonhash.txt" command
 
     john --show=type jonhash.txt
 
