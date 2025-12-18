@@ -4,7 +4,7 @@ Authored by -Mitsu
 
 This room will require a good understanding of Nmap, Metasploit, and JohnTheRipper. 
 
-So to begin this CTF lets start with booting up the Attack Box, and the target machine.
+So lets start with booting up the attack box, and the target machine.
 Please allow 3-5 Minuites for both virtual machines to Boot properly. 
 
 
