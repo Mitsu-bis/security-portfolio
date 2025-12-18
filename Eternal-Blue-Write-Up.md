@@ -25,7 +25,7 @@ Here we have the scan results from nmap
 
 ![alt text](<ScreenShots/Nmap recon scan 1 .png>)
 
-perfect, now we can understand which ports are open and the services that are running on thoes ports. 
+Perfect, now we can understand which ports are open and the services that are running on thoes ports. 
 
 
 Now lets scan the services we found to check if any of them are vulnerable.  
