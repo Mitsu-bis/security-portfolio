@@ -248,10 +248,9 @@ And with that we have cracked the hash and obtained jon's password!
 
 Now lets look around in side this machnie to see if we can find some other hidden flags.
 
-![
-    
 
-](<ScreenShots/additional flag.png>)
+
+![alt text](<ScreenShots/additional flag.png>)
 
 
 Here we can see the first flag we are looking for is hiding in the root folder. 
