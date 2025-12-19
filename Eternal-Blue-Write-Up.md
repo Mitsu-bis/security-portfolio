@@ -14,16 +14,16 @@ leading to arbitrary kernel-level code execution.
 
 
 So lets start with booting up the attack box, and the target machine.
-Please allow 3-5 minuites for both virtual machines to boot properly. 
+Please allow 3-5 minutes for both virtual machines to boot properly. 
 
-This write up will be broken into a few diffrent phases based off the diffrent MITRE ATT&CK Tactics used. 
+This write up will be broken into a few different phases based off the different MITRE ATT&CK Tactics used. 
 
 
 
 **Active Reconnaissance with Nmap (Recon)**
 
 
-lets start with some basic active recon using nmap. Specifically we want to enumerate the versioning of the service that is running on the target's ports. 
+lets start with some basic active recon using Nmap. Specifically we want to enumerate the versioning of the service that is running on the target's ports. 
 
 Start by scanning the Target Server to identify open ports. 
 
@@ -34,7 +34,7 @@ Here we have the scan results from nmap
 
 ![alt text](<ScreenShots/Nmap recon scan 1 .png>)
 
-Perfect, now we can understand which ports are open and the services that are running on thoes ports. 
+Perfect, now we can understand which ports are open and the services that are running on those ports. 
 
 
 Now lets scan the services we found to check if any of them are vulnerable.  
@@ -42,14 +42,14 @@ Now lets scan the services we found to check if any of them are vulnerable.
 We will use nmap's scripting engine to assist us.  
 nmap Syntax: nmap -p {port} --script vuln {targetIP}
 
-    namp -p 445 --script vuln 10.66.161.70
+    nmap -p 445 --script vuln 10.66.161.70
 
 
 Here we can see that the the scan came back with a found vulnerability!
 
 ![alt text](<ScreenShots/NMAP Vuln Scan 1.png>)
 
-Now it's time to use our tools to eplore this vulnerability. 
+Now it's time to use our tools to explore this vulnerability. 
 
 
 **Gain Access with Metasploit (Initial Access)**
@@ -62,7 +62,7 @@ Here we will start Metasploit using the "msfconsole" command.
     msfconsole
 
 
-Please allow a minuite or two for Metasploit to load. 
+Please allow a minute or two for Metasploit to load. 
 
 ![alt text](<ScreenShots/MSFConsole 1.png>)
 
@@ -114,7 +114,7 @@ Now its time to execute the exploit and deliver the payload. Execute this by usi
 
 Note: Normally after executing this exploit it will connect you to a regular shell on the target that would look like "C:\windows\system32". 
 
-**Esclate with Metasploit (Privilege Escalation)**
+**Escalate with Metasploit (Privilege Escalation)**
 
 Above you can see that the exploit worked, and we now have a shell on the target machine. For now lets background this session using the Ctrl+Z on the keyboard. 
 
@@ -122,14 +122,14 @@ Background session 1? [y/N] y
 
     y
 
-(i know my example shows the shell session id as 2, lets pretent the id is 1)
+(i know my example shows the shell session id as 2, lets pretend the id is 1)
 ![alt text](<ScreenShots/MSFConsole session1.png>)
 
 
 
-Now we need to upgrade our shell session to a Meterpreter session. We can do this by using the post exploition module called Shell_to_meterpreter. 
+Now we need to upgrade our shell session to a Meterpreter session. We can do this by using the post exploiting module called Shell_to_meterpreter. 
 
-search "shell_to_merterpreter" to find the module. 
+search "shell_to_meterpreter" to find the module. 
 
     search shell_to_meterpreter
 
@@ -159,7 +159,7 @@ Set the session to 1 with the command "set SESSION 1"
      set SESSION 1
 
 Now we can run our post exploit using the "run" or "exploit" command. 
-Once the payoad has executed it will create a new session named session 2.
+Once the payload has executed it will create a new session named session 2.
 
 We have our Meterpreter session connected on the target machine now.
 
@@ -172,11 +172,11 @@ or
 	
 	sessions 2
 
- Once your inside the session start by verifying that we have esclated to NT Authority/System. Run the "getsystem" command to confirm this. 
+ Once your inside the session start by verifying that we have escalated to NT Authority/System. Run the "getsystem" command to confirm this. 
 
     getsystem
 
-Run the "ps" Comand and lets take a look at the running process list. 
+Run the "ps" Command and lets take a look at the running process list. 
 
     ps
 
@@ -187,11 +187,11 @@ Run the "ps" Comand and lets take a look at the running process list.
 looking at the list of running process's above, Pick one that is running as the NT AUTHORITY/SYSTEM user, and take note of the PID. 
 
 lets migrate our session onto that PID using the "migrate {PROCESS_ID}" command. 
- This may take several attempts, migrating processes is not very stable. If this fails, you may need to re-run the conversion process or pick a diffrent PID.
+ This may take several attempts, migrating processes is not very stable. If this fails, you may need to re-run the conversion process or pick a different PID.
 
     migrate 488
 
- in this example you can see my first Migration to the PID 488 for svchost.exe failed, but the second attempt to migrate to powershell was successfull.
+ in this example you can see my first Migration to the PID 488 for svchost.exe failed, but the second attempt to migrate to powershell was successful.
 
 ![alt text](<ScreenShots/MSFConsole Migrate PID.png>)
 
@@ -246,7 +246,7 @@ The syntax for this is john --format={format} --wordlist={wordlist} {target txt 
 
 And with that we have cracked the hash and obtained jon's password! 
 
-Now lets look around in side this machnie to see if we can find some other hidden flags.
+Now lets look around in side this machine to see if we can find some other hidden flags.
 
 
 
@@ -273,9 +273,19 @@ After executing the ls command we can see flag 2.txt  is one of the listed files
 
 
 
-From here we lets go look for this last flag in a good plase to find some valuable loot. 
+From here we lets go look for this last flag in a good please to find some valuable loot. 
 
 
 ![alt text](ScreenShots/flag3.png)
 
 and with that we have found our last flag.  
+
+
+
+
+
+
+Post- Report
+
+
+
