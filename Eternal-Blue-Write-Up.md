@@ -299,19 +299,20 @@ discovery of multiple flags located across the filesystem.
 
 
 **Attack Chain Overview (MITRE ATT&CK Mapping)**
+
 This attack followed an adversary lifestyle mapped to the MITRE ATT&CK framework.
 
-*Reconnaissance*
+    *Reconnaissance*
 
-   -Network Service Scanning
+        Network Service Scanning
 
-   -SMB service Enumeration via Nmap
+        SMB service Enumeration via Nmap
 
 *Initial Access*
 
-   -Exploitation of remote services
+-Exploitation of remote services
 
-   -EternalBlue SMBv1 Exploit
+-EternalBlue SMBv1 Exploit
 
 *Privilege Escalation*
 
