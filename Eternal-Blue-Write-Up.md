@@ -129,15 +129,15 @@ Background session 1? [y/N] y
 
 Now we need to upgrade our shell session to a Meterpreter session. We can do this by using the post exploiting module called Shell_to_meterpreter. 
 
-search "shell_to_meterpreter" to find the module. 
+Search "shell_to_meterpreter" to find the module. 
 
     search shell_to_meterpreter
 
-select it with the command "use 0"
+Select it with the command "use 0"
 
     use 0
 
-it should look like the image below. 
+It should look like the image below. 
 
 ![alt text](<ScreenShots/MSFConsole shell2Metrpreter3.png>)
 
@@ -284,8 +284,46 @@ and with that we have found our last flag.
 
 
 
+Lets review our after action steps and some lessons learned.
 
-Post- Report
+**Post-Exploitation Summary**
+Through successful exploitation of the EternalBlue vulnerability,
+full remote code execution was achieved against the target system without
+authentication. Privilege escalation to NT AUTHORITY\SYSTEM allowed unrestricted
+access to system processes, credential material, and sensitive files.
+
+Following privilege escalation, local credential hashes were extracted using
+Meterpreter and successfully cracked offline with JohnTheRipper. Additional
+post-exploitation activities confirmed full system compromise through the
+discovery of multiple flags located across the filesystem.
 
 
+**Attack Chain Overview (MITRE ATT&CK Mapping)**
+This attack followed an adversary lifestyle mapped to the MITRE ATT&CK framework.
+
+*Reconnaissance*
+-Network Service Scanning
+-SMB service Enumeration via Nmap
+
+*Initial Access*
+-Exploitation of remote services
+-EternalBlue SMBv1 Exploit
+
+*Privilege Escalation*
+-Exploitation for Privilege Escalation
+-Session upgrade and SYSTEM-level access via Meterpreter
+
+*credential Access*
+-OS Credential Dumping
+-NTLM has extraction and offline password cracking. 
+
+
+
+**Impact Assessment**
+
+
+**Mitigations & Defensive Recommendations**
+
+
+**Final Thoughts / Lessons Learned**
 
