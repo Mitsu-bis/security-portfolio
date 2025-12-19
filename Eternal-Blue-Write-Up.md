@@ -307,22 +307,16 @@ This attack followed an adversary lifestyle mapped to the MITRE ATT&CK framework
 - SMB service Enumeration via Nmap
 
 *Initial Access*
-
--Exploitation of remote services
-
--EternalBlue SMBv1 Exploit
+- Exploitation of remote services
+- EternalBlue SMBv1 Exploit
 
 *Privilege Escalation*
-
--Exploitation for Privilege Escalation
-
--Session upgrade and SYSTEM-level access via Meterpreter
+- Exploitation for Privilege Escalation
+- Session upgrade and SYSTEM-level access via Meterpreter
 
 *credential Access*
-
--OS Credential Dumping
-
--NTLM has extraction and offline password cracking. 
+- OS Credential Dumping
+- NTLM has extraction and offline password cracking. 
 
 
 
