@@ -287,6 +287,7 @@ and with that we have found our last flag.
 Lets review our after action steps and some lessons learned.
 
 **Post-Exploitation Summary**
+
 Through successful exploitation of the EternalBlue vulnerability,
 full remote code execution was achieved against the target system without
 authentication. Privilege escalation to NT AUTHORITY\SYSTEM allowed unrestricted
@@ -300,11 +301,11 @@ discovery of multiple flags located across the filesystem.
 
 **Attack Chain Overview (MITRE ATT&CK Mapping)**
 
-This attack followed an adversary lifestyle mapped to the MITRE ATT&CK framework.
+This attack followed an adversary lifecycle mapped to the MITRE ATT&CK framework.
 
 *Reconnaissance* (TA0043)
 - Network Service Scanning
-- SMB service Enumeration via Nmap
+- SMB service enumeration via Nmap
 
 *Initial Access* (TA0001)
 - Exploitation of remote services
@@ -314,7 +315,7 @@ This attack followed an adversary lifestyle mapped to the MITRE ATT&CK framework
 - Exploitation for Privilege Escalation
 - Session upgrade and SYSTEM-level access via Meterpreter
 
-*credential Access* (TA0006)
+*Credential Access* (TA0006)
 - OS Credential Dumping
 - NTLM hash extraction and offline password cracking. 
 
@@ -322,9 +323,36 @@ This attack followed an adversary lifestyle mapped to the MITRE ATT&CK framework
 
 **Impact Assessment**
 
+If exploited in a real-world environment, this vulnerability would allow an
+unauthenticated attacker to fully compromise a Windows system. From this level
+of access, an attacker could:
+
+- Execute arbitrary commands with SYSTEM privileges
+- Dump and crack local credential hashes
+- Perform lateral movement to other systems on the network
+- Install malware, backdoors, or ransomware
+- Exfiltrate sensitive data without detection
+
+Due to the widespread use of SMB and the lack of authentication required,
+EternalBlue represents a critical risk to unpatched or legacy systems.
+
+
 
 **Mitigations & Defensive Recommendations**
 
+To mitigate the risk associated with CVE-2017-0144 (EternalBlue), the following
+defensive controls are recommended:
+
+- Apply Microsoft security update MS17-010 to all affected systems
+- Disable SMBv1 where it is not explicitly required
+- Restrict inbound access to TCP port 445 using host-based and network firewalls
+- Implement Endpoint Detection and Response (EDR) solutions capable of detecting
+  exploit behavior
+- Monitor SMB traffic for anomalous or malformed requests
+- Enforce strong password policies to reduce the effectiveness of hash cracking
+
 
 **Final Thoughts / Lessons Learned**
+
+This demonstration shows how a single vulnerability can lead to complete system compromise and remains a textbook example of why legacy services and poor patch management continue to pose serious security risks to this day. 
 
