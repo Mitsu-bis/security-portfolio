@@ -302,21 +302,21 @@ discovery of multiple flags located across the filesystem.
 
 This attack followed an adversary lifestyle mapped to the MITRE ATT&CK framework.
 
-*Reconnaissance*
+*Reconnaissance* (TA0043)
 - Network Service Scanning
 - SMB service Enumeration via Nmap
 
-*Initial Access*
+*Initial Access* (TA0001)
 - Exploitation of remote services
 - EternalBlue SMBv1 Exploit
 
-*Privilege Escalation*
+*Privilege Escalation* (TA0004)
 - Exploitation for Privilege Escalation
 - Session upgrade and SYSTEM-level access via Meterpreter
 
-*credential Access*
+*credential Access* (TA0006)
 - OS Credential Dumping
-- NTLM has extraction and offline password cracking. 
+- NTLM hash extraction and offline password cracking. 
 
 
 
