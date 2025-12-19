@@ -302,19 +302,27 @@ discovery of multiple flags located across the filesystem.
 This attack followed an adversary lifestyle mapped to the MITRE ATT&CK framework.
 
 *Reconnaissance*
+
 -Network Service Scanning
+
 -SMB service Enumeration via Nmap
 
 *Initial Access*
+
 -Exploitation of remote services
+
 -EternalBlue SMBv1 Exploit
 
 *Privilege Escalation*
+
 -Exploitation for Privilege Escalation
+
 -Session upgrade and SYSTEM-level access via Meterpreter
 
 *credential Access*
+
 -OS Credential Dumping
+
 -NTLM has extraction and offline password cracking. 
 
 
