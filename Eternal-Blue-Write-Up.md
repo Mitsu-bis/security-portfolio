@@ -263,3 +263,9 @@ For this next flag we are going to navigate the the System32 config folder as sh
 
 
 ![alt text](ScreenShots/flag1.png)
+
+After executing the ls command we can see flag 2.txt  is one of the listed files. 
+
+
+
+![alt text](<ScreenShots/flag 2.png>)
