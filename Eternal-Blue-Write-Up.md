@@ -257,9 +257,9 @@ Here we can see the first flag we are looking for is hiding in the root folder.
 
     cat flag1.txt
     
-    We can view the flag by using the above command. 
+ We can view the flag by using the above command. 
 
-For this next flag we are going to navigate the the System32 config file as shown in the example below. 
+For this next flag we are going to navigate the the System32 config folder as shown in the example below. 
 
 
 ![alt text](ScreenShots/flag1.png)
