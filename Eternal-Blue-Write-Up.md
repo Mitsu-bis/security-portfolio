@@ -352,7 +352,7 @@ defensive controls are recommended:
 - Enforce strong password policies to reduce the effectiveness of hash cracking
 
 
-**Final Thoughts / Lessons Learned**
+**Final Thoughts & Lessons Learned**
 
 This demonstration shows how a single vulnerability can lead to complete system compromise and remains a textbook example of why legacy services and poor patch management continue to pose serious security risks to this day. 
 
