@@ -269,3 +269,11 @@ After executing the ls command we can see flag 2.txt  is one of the listed files
 
 
 ![alt text](<ScreenShots/flag 2.png>)
+
+
+
+
+From here we lets go look for this last flag in a good plase to find some valuable loot. 
+
+
+![alt text](ScreenShots/flag3.png)
