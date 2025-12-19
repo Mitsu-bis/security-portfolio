@@ -303,15 +303,15 @@ This attack followed an adversary lifestyle mapped to the MITRE ATT&CK framework
 
 *Reconnaissance*
 
--Network Service Scanning
+   -Network Service Scanning
 
--SMB service Enumeration via Nmap
+   -SMB service Enumeration via Nmap
 
 *Initial Access*
 
--Exploitation of remote services
+   -Exploitation of remote services
 
--EternalBlue SMBv1 Exploit
+   -EternalBlue SMBv1 Exploit
 
 *Privilege Escalation*
 
