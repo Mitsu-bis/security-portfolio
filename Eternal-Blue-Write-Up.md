@@ -246,21 +246,21 @@ The syntax for this is john --format={format} --wordlist={wordlist} {target txt 
 
 And with that we have cracked the hash and obtained jon's password! 
 
+Now lets look around in side this machnie to see if we can find some other hidden flags.
+
+![
+    
+
+](<ScreenShots/additional flag.png>)
 
 
+Here we can see the first flag we are looking for is hiding in the root folder. 
+
+    cat flag1.txt
+    
+    We can view the flag by using the above command. 
+
+For this next flag we are going to navigate the the System32 config file as shown in the example below. 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-Additional Flags!!!! 
+![alt text](ScreenShots/flag1.png)
