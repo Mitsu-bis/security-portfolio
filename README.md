@@ -74,9 +74,9 @@ tooling, and process, not original research.*
 
 ## About
 
-[2–3 sentences: background, what you're working toward (e.g. offensive-security consulting),
-and the principle that runs through the work — findings handled within scope and disclosed
-responsibly. Keep it short; the write-ups do the talking.]
+I'm a USMC veteran and the primary IT infrastructure and security owner for a ~200-user construction firm operating across 23 states, so I defend a real, live environment every day rather than a lab.
+My focus is offensive security, detection, and vendor risk, and I rank in the top 2% on TryHackMe.
+I'm building toward my own security consulting practice, and the principle that runs through everything here is simple; I test only what I'm authorized to, scope my work carefully, and disclose responsibly.
 
 ---
 
