@@ -20,6 +20,8 @@ USMC veteran. Focused on practical, responsibly-handled security work.
 - Detection engineering & security monitoring
 - Third-party / vendor risk assessment
 - Home-lab-driven research and tooling
+- physical penetration testing / physical intrusion
+- social engineering / physical social engineering
 
 ---
 
