@@ -5,11 +5,7 @@
 **IT Infrastructure & Security Engineer** · Offensive security · Detection engineering · Vendor risk
 USMC veteran · Sole IT & security owner for a ~200-user firm across 23 states · Top 2% on TryHackMe
 
-![USMC Veteran](https://img.shields.io/badge/USMC-Veteran-B87333?style=for-the-badge)
-![TryHackMe](https://img.shields.io/badge/TryHackMe-Top%202%25-B87333?style=for-the-badge)
-![Focus](https://img.shields.io/badge/Focus-Offensive%20%C2%B7%20Detection%20%C2%B7%20Vendor%20Risk-2b2b2b?style=for-the-badge)
-
-[📧 Email](mailto:skylerm@gconinc.com) · [💼 LinkedIn](https://www.linkedin.com/in/skyler-mays-11b691184/) · [🐙 GitHub @Mitsu-bis](https://github.com/Mitsu-bis) · [🎯 HackerOne](https://hackerone.com/mitsu-bis?type=user) · [🧩 TryHackMe](https://tryhackme.com/p/Mitsubish)
+[Email](mailto:skylerm@gconinc.com) · [LinkedIn](https://www.linkedin.com/in/skyler-mays-11b691184/) · [GitHub @Mitsu-bis](https://github.com/Mitsu-bis) · [HackerOne](https://hackerone.com/mitsu-bis?type=user) · [TryHackMe](https://tryhackme.com/p/Mitsubish)
 
 </div>
 
@@ -18,7 +14,7 @@ USMC veteran · Sole IT & security owner for a ~200-user firm across 23 states �
 I'm a USMC veteran and the primary IT infrastructure and security owner for a ~200-user
 construction firm operating across 23 states, so I defend a real, live environment every day
 rather than a lab. My work spans offensive security, detection engineering, and vendor risk,
-and I rank in the **top 2% on TryHackMe**. I'm building toward my own security consulting
+and I rank in the top 2% on TryHackMe. I'm building toward my own security consulting
 practice. The principle that runs through everything here is simple: I test only what I'm
 authorized to, scope my work carefully, and disclose responsibly.
 
@@ -28,7 +24,7 @@ authorized to, scope my work carefully, and disclose responsibly.
 
 ---
 
-## 🔎 Focus Areas
+## Focus Areas
 
 | | |
 |---|---|
@@ -41,11 +37,11 @@ authorized to, scope my work carefully, and disclose responsibly.
 
 ---
 
-## 🛠️ Tooling & Projects
+## Tooling & Projects
 
 *Things I've built and run.*
 
-### ⚔️ StrikeOps — PenTest Command Center
+### StrikeOps — PenTest Command Center
 
 A purpose-built command center for running professional penetration-testing engagements end
 to end — a single local cockpit driving the full lifecycle (Recon → Enumeration →
@@ -53,7 +49,7 @@ Exploitation → Reporting), with evidence capture, MITRE ATT&CK mapping, CVSS 3
 findings-driven relevance engine, an attack-chain builder, and one-click client-ready report
 export. Runs fully local, OPSEC-conscious by design.
 
-**→ [View the StrikeOps showcase](https://github.com/Mitsu-bis/strikeops-showcase)**
+**[View the StrikeOps showcase →](https://github.com/Mitsu-bis/strikeops-showcase)**
 
 | Project | Description | Link |
 |---|---|---|
@@ -62,7 +58,7 @@ export. Runs fully local, OPSEC-conscious by design.
 
 ---
 
-## 🎯 Original Findings & Responsible Disclosures
+## Original Findings & Responsible Disclosures
 
 *Real-world findings discovered in authorized contexts, validated within scope, and disclosed
 responsibly. Published after remediation only.*
@@ -77,7 +73,7 @@ responsibly. Published after remediation only.*
 
 ---
 
-## 🧪 Labs & CTF Write-Ups
+## Labs & CTF Write-Ups
 
 *Documented exploitation and methodology from training platforms and CTFs. These are
 guided / known-vulnerability exercises — included to demonstrate documentation, tooling, and
@@ -89,7 +85,7 @@ process, not original research.*
 
 ---
 
-## 📝 Methodology & Notes
+## Methodology & Notes
 
 *Process-focused write-ups that show how I approach a problem, independent of any single target.*
 
@@ -100,7 +96,7 @@ process, not original research.*
 
 ---
 
-### ⚖️ A note on scope & ethics
+### A note on scope & ethics
 
 Every finding here was discovered in a context I was authorized to assess — systems I
 administer, platforms that authorize testing, or training environments built for it —
