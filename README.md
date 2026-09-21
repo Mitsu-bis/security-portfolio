@@ -5,7 +5,7 @@
 **IT Infrastructure & Security Engineer** · Offensive security · Detection engineering · Vendor risk
 USMC veteran · Sole IT & security owner for a ~200-user firm across 23 states · Top 2% on TryHackMe
 
-[Email](mailto:skylerm@gconinc.com) · [LinkedIn](https://www.linkedin.com/in/skyler-mays-11b691184/) · [GitHub @Mitsu-bis](https://github.com/Mitsu-bis) · [HackerOne](https://hackerone.com/mitsu-bis?type=user) · [TryHackMe](https://tryhackme.com/p/Mitsubish)
+[LinkedIn](https://www.linkedin.com/in/skyler-mays-11b691184/) · [GitHub @Mitsu-bis](https://github.com/Mitsu-bis) · [HackerOne](https://hackerone.com/mitsu-bis?type=user) · [TryHackMe](https://tryhackme.com/p/Mitsubish) · [Resume](resume/)
 
 </div>
 
