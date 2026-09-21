@@ -7,8 +7,8 @@ USMC veteran. Focused on practical, responsibly-handled security work.
 > systems are published **only after responsible disclosure and remediation**, and are
 > sanitized of any live data.
 
-**Contact:** [email / LinkedIn / handle]
-**Platforms:** [HackerOne / TryHackMe / HackTheBox profiles, if public]
+**Contact:** [email(skylerm@gconinc.com) /[ LinkedIn](https://www.linkedin.com/in/skyler-mays-11b691184/) / handle(Mitsu-bis)]
+**Platforms:** [HackerOne(https://hackerone.com/mitsu-bis?type=user) / TryHackMe(https://tryhackme.com/p/Mitsubish)]
 
 ---
 
