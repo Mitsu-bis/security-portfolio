@@ -37,6 +37,37 @@ authorized to, scope my work carefully, and disclose responsibly.
 
 ---
 
+## Certifications
+
+<p>
+  <a href="https://www.credly.com/badges/293df1a6-3ea4-44e6-bd37-2bc2d90a9f17"><img src="https://images.credly.com/images/80d8a06a-c384-42bf-ad36-db81bce5adce/blob" height="110" alt="CompTIA Security+ ce"></a>
+  &nbsp;
+  <a href="https://www.credly.com/badges/087281c4-9d20-43ad-b98a-3f3cb1400659"><img src="https://images.credly.com/images/daf36702-99d0-4ebb-9788-ba7ac797cc8e/image.png" height="110" alt="Cisco Certified Support Technician (CCST) Cybersecurity"></a>
+  &nbsp;
+  <a href="https://www.credly.com/badges/81fae525-d177-4d4c-982a-0685c0272a5a"><img src="https://images.credly.com/images/c72cea65-b88a-4a72-bf44-dc41b04248b7/image.png" height="110" alt="Cisco Certificate in Ethical Hacking"></a>
+</p>
+
+**CompTIA Security+ (ce)** · **Cisco Certified Support Technician — Cybersecurity (Lifetime)** · **Cisco Certificate in Ethical Hacking** · *OSCP — in progress*
+
+<details>
+<summary>Cisco Networking Academy course badges</summary>
+
+<p>
+  <a href="https://www.credly.com/badges/3dc88233-26f0-4ceb-af53-ad0bb2ee7458"><img src="https://images.credly.com/images/5d5ac32b-d239-42b8-9665-8a921dc3ab47/image.png" height="80" alt="Cyber Threat Management"></a>
+  &nbsp;
+  <a href="https://www.credly.com/badges/02358fea-155c-4f7a-ba54-a68615637fc2"><img src="https://images.credly.com/images/51526f76-711b-4caf-b04d-27f89512b112/NetworkDefense_v1_091721.png" height="80" alt="Network Defense"></a>
+  &nbsp;
+  <a href="https://www.credly.com/badges/a4b100c9-102b-4576-a32f-1803cbb44a1f"><img src="https://images.credly.com/images/0ca5f542-fb5e-4a22-9b7a-c1a1ce4c3db7/EndpointSecurity.png" height="80" alt="Endpoint Security"></a>
+  &nbsp;
+  <a href="https://www.credly.com/badges/999303a1-417b-42b4-9be3-9f905c33b666"><img src="https://images.credly.com/images/441578ec-c0f3-46cc-95fc-86b27e90cf4f/image.png" height="80" alt="Junior Cybersecurity Analyst Career Path"></a>
+</p>
+
+</details>
+
+*Every badge links to its public verification on [Credly](https://www.credly.com/users/skyler-mays.3e833335).*
+
+---
+
 ## Tooling & Projects
 
 *Things I've built and run.*
